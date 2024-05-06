@@ -44,6 +44,6 @@ Made by [@kwaa](https://github.com/kwaa) and [community](https://github.com/impo
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Sat Apr 27 2024)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Mon May 06 2024)_
 
 <!-- /automd -->
