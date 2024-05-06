@@ -1,2 +1,2 @@
-export * as context from '@kkna/context'
-export * as core from '@kkna/core'
+export * as context from './context'
+export * as core from './core'
