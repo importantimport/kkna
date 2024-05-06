@@ -9,7 +9,10 @@
     "build:core": "pnpm -rF @kkna/core build",
     "build:context": "pnpm -rF @kkna/context build",
     "build:preset": "pnpm -rF @kkna/preset-* build",
-    "build:kkna": "pnpm -rF kkna build"
+    "build:kkna": "pnpm -rF kkna build",
+    "docs:dev": "pnpm -rF @kkna/docs dev",
+    "docs:build": "pnpm -rF @kkna/docs build",
+    "docs:preview": "pnpm -rF @kkna/docs preview"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.3",
@@ -20,6 +23,7 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.3",
     "vite": "^5.2.10",
+    "vitepress": "^1.1.4",
     "vitest": "^1.4.0"
   }
 }
