@@ -46,7 +46,6 @@
   ],
   "scripts": {
     "build": "tsup",
-    "build:automd": "automd",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -21,8 +21,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "build:automd": "automd"
+    "build": "tsup"
   },
   "devDependencies": {
     "fff-flavored-frontmatter": "^1.2.1"

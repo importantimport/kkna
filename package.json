@@ -4,12 +4,12 @@
   "private": true,
   "repository": "github:importantimport/kkna",
   "scripts": {
+    "automd": "automd && pnpm -r exec automd",
     "build": "pnpm build:core && pnpm build:context && pnpm build:preset && pnpm build:kkna",
     "build:core": "pnpm -rF @kkna/core build",
     "build:context": "pnpm -rF @kkna/context build",
     "build:preset": "pnpm -rF @kkna/preset-* build",
-    "build:kkna": "pnpm -rF kkna build",
-    "build:automd": "automd && pnpm -r build:automd"
+    "build:kkna": "pnpm -rF kkna build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.3",
