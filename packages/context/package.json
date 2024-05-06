@@ -1,0 +1,60 @@
+{
+  "name": "@kkna/context",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "藍+85CD",
+  "license": "MIT",
+  "homepage": "https://github.com/importantimport/kkna",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/importantimport/kkna.git",
+    "directory": "packages/context"
+  },
+  "bugs": "https://github.com/importantimport/kkna/issues",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./consume": {
+      "types": "./dist/consume.d.ts",
+      "default": "./dist/comsume.js"
+    },
+    "./consume.js": {
+      "types": "./dist/consume.d.ts",
+      "default": "./dist/comsume.js"
+    },
+    "./context": {
+      "types": "./dist/context.d.ts",
+      "default": "./dist/context.js"
+    },
+    "./context.js": {
+      "types": "./dist/context.d.ts",
+      "default": "./dist/context.js"
+    },
+    "./provide": {
+      "types": "./dist/provide.d.ts",
+      "default": "./dist/provide.js"
+    },
+    "./provide.js": {
+      "types": "./dist/provide.d.ts",
+      "default": "./dist/provide.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:automd": "automd",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@kkna/core": "workspace:*",
+    "@lit/context": "^1.1.0"
+  },
+  "devDependencies": {
+    "@lit/reactive-element": "^2.0.4"
+  }
+}

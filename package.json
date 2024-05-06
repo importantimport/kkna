@@ -1,0 +1,25 @@
+{
+  "name": "@kkna/workspace",
+  "type": "module",
+  "private": true,
+  "repository": "github:importantimport/kkna",
+  "scripts": {
+    "build": "pnpm build:core && pnpm build:context && pnpm build:preset && pnpm build:kkna",
+    "build:core": "pnpm -rF @kkna/core build",
+    "build:context": "pnpm -rF @kkna/context build",
+    "build:preset": "pnpm -rF @kkna/preset-* build",
+    "build:kkna": "pnpm -rF kkna build",
+    "build:automd": "automd && pnpm -r build:automd"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.8.3",
+    "@importantimport/tsconfig": "^0.0.1",
+    "automd": "^0.3.7",
+    "eslint": "^8.57.0",
+    "eslint-plugin-perfectionist": "^2.7.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.10",
+    "vitest": "^1.4.0"
+  }
+}

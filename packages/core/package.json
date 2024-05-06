@@ -1,0 +1,30 @@
+{
+  "name": "@kkna/core",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "藍+85CD",
+  "license": "MIT",
+  "homepage": "https://github.com/importantimport/kkna",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/importantimport/kkna.git",
+    "directory": "packages/core"
+  },
+  "bugs": "https://github.com/importantimport/kkna/issues",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:automd": "automd"
+  },
+  "devDependencies": {
+    "fff-flavored-frontmatter": "^1.2.1"
+  }
+}

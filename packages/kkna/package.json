@@ -1,0 +1,46 @@
+{
+  "name": "kkna",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "藍+85CD",
+  "license": "MIT",
+  "homepage": "https://github.com/importantimport/kkna",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/importantimport/kkna.git",
+    "directory": "packages/kkna"
+  },
+  "bugs": "https://github.com/importantimport/kkna/issues",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./context": {
+      "types": "./dist/context.d.ts",
+      "default": "./dist/context.js"
+    },
+    "./context.js": {
+      "types": "./dist/context.d.ts",
+      "default": "./dist/context.js"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "default": "./dist/core.js"
+    },
+    "./core.js": {
+      "types": "./dist/core.d.ts",
+      "default": "./dist/core.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@kkna/context": "workspace:*",
+    "@kkna/core": "workspace:*"
+  }
+}
