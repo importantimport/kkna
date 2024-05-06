@@ -49,11 +49,9 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
-  "dependencies": {
-    "@kkna/core": "workspace:*",
-    "@lit/context": "^1.1.0"
-  },
   "devDependencies": {
+    "@kkna/core": "workspace:*",
+    "@lit/context": "^1.1.0",
     "@lit/reactive-element": "^2.0.4"
   }
 }
