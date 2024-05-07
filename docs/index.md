@@ -3,19 +3,19 @@
 layout: home
 
 hero:
-  name: KKna ココナ
-  # text: Comment Component
+  name: KKna
+  text: ココナ
   tagline: All-in-One, Easy-to-Use Comment Component.
   image:
     src: https://fonts.gstatic.com/s/e/notoemoji/latest/1f4af/512.webp
     alt: 💯
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Quickstart
+      link: '#'
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/importantimport/kkna
 
 features:
   - title: Feature A
