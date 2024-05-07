@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "KKna"
-  text: "KKna Documentation"
-  tagline: My great project tagline
+  name: KKna ココナ
+  # text: Comment Component
+  tagline: All-in-One, Easy-to-Use Comment Component.
   actions:
     - theme: brand
       text: Markdown Examples
@@ -22,4 +22,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
