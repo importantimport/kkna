@@ -1,9 +1,9 @@
-import { definePreset } from '@kkna/core'
+import { definePreset, definePresetTask } from '@kkna/core'
 
 import { fetchContext, transformContext } from './utils/comments'
 import { fetchFavouritedBy, fetchRebloggedBy, transformReaction } from './utils/reactions'
 
-export interface PresetMastodonOptions {
+export interface Options extends Record<string, unknown> {
   /**
    * Mastodon Status ID.
    * @example '111211120931974745'
@@ -16,15 +16,21 @@ export interface PresetMastodonOptions {
   instance: URL['origin']
 }
 
-export const mastodon = definePreset<{ mastodon: PresetMastodonOptions }>(async ({ mastodon }) => ({
-  comments: await fetchContext(mastodon.id, mastodon.instance)
-    .then(context => transformContext(context)),
-  reactions: {
-    emojis: {
-      '♺': await fetchRebloggedBy(mastodon.id, mastodon.instance)
-        .then(accounts => transformReaction(accounts)),
-      '⭐': await fetchFavouritedBy(mastodon.id, mastodon.instance)
-        .then(accounts => transformReaction(accounts)),
+export const mastodon = definePreset<Options>(options => ({
+  name: 'mastodon',
+  options,
+  task: definePresetTask(async () => ({
+    comments: await fetchContext(options.id, options.instance)
+      .then(context => transformContext(context)),
+    reactions: {
+      emojis: {
+        '♺': await fetchRebloggedBy(options.id, options.instance)
+          .then(accounts => transformReaction(accounts)),
+        '⭐': await fetchFavouritedBy(options.id, options.instance)
+          .then(accounts => transformReaction(accounts)),
+      },
     },
-  },
+  })),
 }))
+
+export default mastodon

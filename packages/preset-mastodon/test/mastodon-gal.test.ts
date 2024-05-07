@@ -6,15 +6,12 @@ import { mastodon } from '../src'
 describe('mastodon.gal', () => {
   it('mastodon', async () => {
     const result = await process({
-      data: {
-        // https://mastodon.gal/@misteroom/110810445656343599
-        mastodon: {
-          id: '110810445656343599',
-          instance: 'https://mastodon.gal',
-        },
-      },
       overrides: { url: { href: 'https://example.com' } },
-      presets: [mastodon as any],
+      presets: [mastodon({
+        // https://mastodon.gal/@misteroom/110810445656343599
+        id: '110810445656343599',
+        instance: 'https://mastodon.gal',
+      })],
     })
 
     // eslint-disable-next-line no-console

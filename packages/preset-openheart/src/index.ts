@@ -1,6 +1,6 @@
-import { definePreset } from '@kkna/core'
+import { definePreset, definePresetTask } from '@kkna/core'
 
-export interface PresetOpenHeartOptions {
+export interface Options extends Record<string, unknown> {
   /**
    * OpenHeart API Point.
    * @example 'https://api.openheart.fyi'
@@ -8,9 +8,13 @@ export interface PresetOpenHeartOptions {
   endpoint: URL | string
 }
 
-export const openheart = definePreset<{ openheart: PresetOpenHeartOptions }>(async ({ openheart }) => ({
-  reactions: {
-    emojis: await fetch(openheart.endpoint, { headers: { accept: 'application/json' } })
-      .then(res => res.json()),
-  },
+export const openheart = definePreset<Options>(options => ({
+  name: 'openheart',
+  options,
+  task: definePresetTask(async () => ({
+    reactions: {
+      emojis: await fetch(options.endpoint, { headers: { accept: 'application/json' } })
+        .then(res => res.json()),
+    },
+  })),
 }))
