@@ -1,4 +1,4 @@
-# KKna [WIP]
+# 💯 KKna [WIP]
 
 All-in-One, Easy-to-Use Comment Component.
 
