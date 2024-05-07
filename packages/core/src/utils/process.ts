@@ -4,7 +4,7 @@ import type { Reactions } from '../types/reactions'
 import type { Preset } from './preset'
 
 export interface ProcessOptions {
-  data?: Partial<Data> & Record<string, unknown>
+  data?: Partial<Data>
   overrides?: ProcessOverrides
   presets?: Preset[]
 }
@@ -21,7 +21,7 @@ export interface ProcessResult {
   reactions?: Reactions
 }
 
-export const processData = (data: ProcessOptions['data'], overrides?: ProcessOptions['overrides']): Data & Record<string, unknown> => ({
+export const processData = (data: ProcessOptions['data'], overrides: ProcessOptions['overrides']): Data => ({
   ...data,
   url: new URL(
     overrides?.url?.href ?? globalThis.location.pathname,
@@ -33,18 +33,24 @@ export const processEmojis = (a: Reactions['emojis'], b: Reactions['emojis']): R
   Object.entries(b ?? {})
     .reduce((acc, [emoji, count]) => ({ ...acc, [emoji]: (acc[emoji] || 0) + count }), a ?? {})
 
-export const process = async ({ data, overrides, presets }: ProcessOptions = {}): Promise<ProcessResult> => {
-  const processedData = processData(data, overrides)
+export const process = async (options: ProcessOptions = {}): Promise<ProcessResult> => {
+  const data = processData(options.data, options.overrides)
+  const comments: Comment[] = []
+  let emojis: Reactions['emojis'] = {}
 
-  if (!presets)
+  if (!options.presets)
     return {}
 
-  return await Promise.all(presets.map(async preset => await preset(processedData)))
-    .then(results => results.reduce((prev, curr) => ({
-      comments: [...(prev.comments ?? []), ...(curr.comments ?? [])],
-      reactions: {
-        // custom_emojis: processCustomEmojis // TODO
-        emojis: processEmojis(prev.reactions?.emojis, curr.reactions?.emojis),
-      },
-    }), {}))
+  for (const preset of options.presets) {
+    const result = await preset.task(data)
+    data[`_${preset.name}`] = preset.options
+    emojis = processEmojis(emojis, result.reactions?.emojis)
+    if (result.comments)
+      comments.push(...result.comments)
+  }
+
+  return {
+    comments,
+    reactions: { emojis },
+  }
 }

@@ -1,4 +1,4 @@
-export interface Data {
+export interface Data extends Record<string, unknown> {
   /**
    * @default
    * ```ts
