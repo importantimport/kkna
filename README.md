@@ -15,7 +15,7 @@ Components use [@kkna/core](/packages/core/) and [@kkna/context](/packages/conte
 ###### Official
 
 - [@kkna/component](/packages/component/) - Prototype Component, for testing only
-- [@kkna/component-material](#) - Material Component (TODO)
+- [@kkna/component-material](/packages/component-material/) - Material Component
 
 ## Presets
 
@@ -44,6 +44,6 @@ Made by [@kwaa](https://github.com/kwaa) and [community](https://github.com/impo
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Mon May 06 2024)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Wed May 08 2024)_
 
 <!-- /automd -->
