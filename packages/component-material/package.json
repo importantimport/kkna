@@ -27,6 +27,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kkna/context": "workspace:^",
+    "@kkna/core": "workspace:^",
+    "@lit/context": "^1.1.0",
+    "@lit/task": "^1.0.0",
+    "@material/web": "^1.4.1",
     "lit": "^3.1.2"
   }
 }
