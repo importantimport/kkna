@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "useDefineForClassFields": false,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "allowImportingTsExtensions": false,
+    "outDir": "./dist"
   },
   "include": ["src"]
 }

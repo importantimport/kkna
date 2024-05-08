@@ -1,5 +1,6 @@
+import { compileLitTemplates } from '@lit-labs/compiler'
+import typescript from '@rollup/plugin-typescript'
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   build: {
@@ -10,5 +11,16 @@ export default defineConfig({
     },
   },
   esbuild: { legalComments: 'external' },
-  plugins: [dts()],
+  plugins: [
+    typescript({
+      declaration: true,
+      transformers: {
+        /**
+         * need typescript@5.3.3
+         * @see {@link https://github.com/lit/lit/issues/4460}
+         */
+        before: [compileLitTemplates()],
+      },
+    }),
+  ],
 })
