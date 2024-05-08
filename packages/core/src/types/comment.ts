@@ -16,4 +16,33 @@ interface CommentFedi {
 
 }
 
-export type Comment = CommentBase & CommentFedi
+interface CommentSource {
+  source?: {
+    /**
+     * Picture Icons.
+     * @example `https://www.google.com/favicon.ico`
+     */
+    iconImage?: string
+    /**
+     * Icon from Simple Icons.
+     * @see {@link https://icones.js.org/collection/simple-icons}
+     * @example
+     * ```ts
+     * 'simple-icons:activitypub' => 'activitypub'
+     * ```
+     */
+    iconSimple?: string
+    /**
+     * Source Link.
+     * @example `https://example.com/posts/foo-bar`
+     */
+    link?: string
+    /**
+     * Source Alt Text.
+     * @example `Example Domain`
+     */
+    text: string
+  }
+}
+
+export type Comment = CommentBase & CommentFedi & CommentSource
