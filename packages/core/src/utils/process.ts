@@ -27,6 +27,9 @@ export const processData = (data: ProcessOptions['data'], overrides: ProcessOpti
     overrides?.url?.href ?? globalThis.location.pathname,
     overrides?.url?.origin ?? globalThis.location?.origin,
   ),
+  vendors: {
+    simpleIcons: data?.vendors?.simpleIcons ?? (slug => `https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${slug}.svg`),
+  },
 })
 
 export const processEmojis = (a: Reactions['emojis'], b: Reactions['emojis']): Reactions['emojis'] =>
