@@ -5,4 +5,4 @@ export type { Data } from './types/data.ts'
 export type { Reactions } from './types/reactions.ts'
 
 export { type Preset, type PresetTask, definePreset, definePresetTask } from './utils/preset.ts'
-export { type ProcessOptions, type ProcessResult, process } from './utils/process.ts'
+export { type ProcessOptions, type ProcessOverrides, type ProcessResult, process, processComments, processData, processEmojis } from './utils/process.ts'
