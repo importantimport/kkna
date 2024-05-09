@@ -36,18 +36,10 @@ export const processEmojis = (a: Reactions['emojis'], b: Reactions['emojis']): R
   Object.entries(b ?? {})
     .reduce((acc, [emoji, count]) => ({ ...acc, [emoji]: (acc[emoji] || 0) + count }), a ?? {})
 
-export const processComments = (comments: Comment[]): Comment[] => {
-  const result = new Map<string, Comment>()
-
-  for (const comment of comments.sort((a, b) => a.published.getTime() - b.published.getTime())) {
-    if (comment.in_reply_to_id)
-      result.get(comment.in_reply_to_id)?.replies.push(comment)
-    else
-      result.set(comment.id, comment)
-  }
-
-  return Array.from(result.values())
-}
+export const processComments = (comments: Comment[], parent: string | undefined = undefined): Comment[] =>
+  comments
+    .filter(comment => comment.in_reply_to_id === parent)
+    .map(comment => ({ ...comment, replies: processComments(comments, comment.id) }))
 
 export const process = async (options: ProcessOptions = {}): Promise<ProcessResult> => {
   const data = processData(options.data, options.overrides)
