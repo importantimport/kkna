@@ -12,6 +12,9 @@ export const transformContext = ({ descendants }: Context): Comment[] =>
   descendants.map(status => ({
     author: transformAccount(status.account),
     content: status.content,
+    id: status.id,
+    in_reply_to_id: status.in_reply_to_id ?? undefined,
     published: new Date(status.created_at),
+    replies: [],
     url: status.url ? new URL(status.url) : undefined,
   }))
