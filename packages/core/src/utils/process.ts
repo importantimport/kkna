@@ -10,10 +10,7 @@ export interface ProcessOptions {
 }
 
 export interface ProcessOverrides {
-  url?: {
-    href?: URL['href']
-    origin?: URL['origin']
-  }
+  url?: Partial<URL>
 }
 
 export interface ProcessResult {
@@ -23,10 +20,12 @@ export interface ProcessResult {
 
 export const processData = (data: ProcessOptions['data'], overrides: ProcessOptions['overrides']): Data => ({
   ...data,
-  url: new URL(
-    overrides?.url?.href ?? globalThis.location.pathname,
-    overrides?.url?.origin ?? globalThis.location?.origin,
-  ),
+  url: overrides?.url instanceof URL
+    ? overrides.url
+    : new URL(
+      overrides?.url?.href ?? globalThis.location.pathname,
+      overrides?.url?.origin ?? globalThis.location?.origin,
+    ),
   vendors: {
     simpleIcons: data?.vendors?.simpleIcons ?? (slug => `https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${slug}.svg`),
   },
