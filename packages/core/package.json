@@ -21,7 +21,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "fff-flavored-frontmatter": "^1.2.1"
