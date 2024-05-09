@@ -5,6 +5,10 @@ interface CommentBase {
   author: Author
   /** content_html */
   content: string
+  /** id or url */
+  id: string
+  /** in reply to id */
+  in_reply_to_id?: string
   /** date_published */
   published: Date
   /** url */
@@ -14,6 +18,10 @@ interface CommentBase {
 /** Inspired by {@link https://docs.joinmastodon.org/entities/Status/} */
 interface CommentFedi {
 
+}
+
+interface CommentMetadata {
+  replies: Comment[]
 }
 
 interface CommentSource {
@@ -45,4 +53,4 @@ interface CommentSource {
   }
 }
 
-export type Comment = CommentBase & CommentFedi & CommentSource
+export type Comment = CommentBase & CommentFedi & CommentMetadata & CommentSource
