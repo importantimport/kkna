@@ -20,6 +20,10 @@ import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 @customElement('kkna-material-comment')
 export class KKnaMaterialComment extends LitElement {
   static styles = [typescaleStyles, css`
+    :host {
+      --md-divider-thickness: 0.05rem;
+    }
+
     .chip {
       --md-filter-chip-trailing-space: 12px;
     }
