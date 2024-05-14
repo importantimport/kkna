@@ -13,6 +13,10 @@ export const components: DefaultTheme.NavItemWithLink[] = [
 
 export const presets: DefaultTheme.NavItemWithLink[] = [
   {
+    link: '/presets/hatsu',
+    text: 'Hatsu',
+  },
+  {
     link: '/presets/mastodon',
     text: 'Mastodon',
   },

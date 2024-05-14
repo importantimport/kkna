@@ -139,6 +139,15 @@ importers:
         specifier: workspace:*
         version: link:../core
 
+  packages/preset-hatsu:
+    devDependencies:
+      '@kkna/core':
+        specifier: workspace:*
+        version: link:../core
+      '@kkna/preset-mastodon':
+        specifier: workspace:*
+        version: link:../preset-mastodon
+
   packages/preset-mastodon:
     devDependencies:
       '@kkna/core':

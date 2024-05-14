@@ -21,6 +21,7 @@ Components use [@kkna/core](/packages/core/) and [@kkna/context](/packages/conte
 
 ###### Official
 
+- [@kkna/preset-hatsu](/packages/preset-hatsu/) - Hatsu Preset
 - [@kkna/preset-mastodon](/packages/preset-mastodon/) - Mastodon Preset
 - [@kkna/preset-openheart](/packages/preset-openheart/) - OpenHeart Preset
 - [@kkna/preset-wmio](#) - Webmention.io Preset (TODO)
