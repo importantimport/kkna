@@ -9,6 +9,7 @@ import { styles as typescaleStyles } from '@material/web/typography/md-typescale
 import { LitElement, css, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
+import './components/comment'
 import './components/reactions'
 
 /**
@@ -47,6 +48,7 @@ export class KKnaMaterial extends LitElement {
       ${this._process.render({
       complete: result => html`<div class="content">
         ${result.reactions && html`<kkna-material-reactions .reactions=${result.reactions}></kkna-material-reactions>`}
+        ${result.comments?.map(comment => html`<kkna-material-comment .comment=${comment}></kkna-material-comment>`)}
         <h3>KKna processOptions</h3>
         <pre><code>${JSON.stringify(this.processOptions, null, 2)}</code></pre>
         <h3>KKna result</h3>
