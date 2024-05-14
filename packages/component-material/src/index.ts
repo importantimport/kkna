@@ -50,9 +50,9 @@ export class KKnaMaterial extends LitElement {
         ${result.reactions && html`<kkna-material-reactions .reactions=${result.reactions}></kkna-material-reactions>`}
         ${result.comments?.map(comment => html`<kkna-material-comment .comment=${comment}></kkna-material-comment>`)}
         <h3>KKna processOptions</h3>
-        <pre><code>${JSON.stringify(this.processOptions, null, 2)}</code></pre>
+        <pre style="overflow-x: scroll"><code>${JSON.stringify(this.processOptions, null, 2)}</code></pre>
         <h3>KKna result</h3>
-        <pre><code>${JSON.stringify(result, null, 2)}</code></pre>
+        <pre style="overflow-x: scroll"><code>${JSON.stringify(result, null, 2)}</code></pre>
       </div>`,
       error: err => html`<p>Error: ${err}</p>`,
       pending: () => html`<md-circular-progress class="pending" indeterminate></md-circular-progress>`,
