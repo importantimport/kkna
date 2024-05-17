@@ -11,7 +11,7 @@ import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
-import { processEmojis } from '../utils/format-emojis'
+import { processEmojis } from '../utils/process-emojis'
 
 /**
  * An example element.
