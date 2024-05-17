@@ -1,4 +1,5 @@
 import type { Author } from './author'
+import type { CustomEmoji } from './custom-emoji'
 
 interface CommentBase {
   /** author */
@@ -17,7 +18,7 @@ interface CommentBase {
 
 /** Inspired by {@link https://docs.joinmastodon.org/entities/Status/} */
 interface CommentFedi {
-
+  emojis?: CustomEmoji[]
 }
 
 interface CommentMetadata {
