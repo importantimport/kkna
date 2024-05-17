@@ -11,6 +11,8 @@ import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
+import { processEmojis } from '../utils/format-emojis'
+
 /**
  * An example element.
  *
@@ -74,7 +76,7 @@ export class KKnaMaterialComment extends LitElement {
         <md-list-item>
           ${this.comment.author.avatar && html`<img slot="start" width="36" height="36" style="border-radius: 100%" src=${this.comment.author.avatar} />`}
           <div slot="headline" class="headline">
-            ${this.comment.author.name}
+            ${unsafeHTML(processEmojis(this.comment.author.name, this.comment.emojis))}
             <span class="flex-1"></span>
             <img class="source" height="24" width="18" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/activitypub.svg" />
           </div>
@@ -82,7 +84,7 @@ export class KKnaMaterialComment extends LitElement {
         </md-list-item>
         <md-divider></md-divider>
         <md-list-item class="md-typescale-body-medium">
-          ${unsafeHTML(this.comment.content)}
+          ${unsafeHTML(processEmojis(this.comment.content, this.comment.emojis))}
         </md-list-item>
       </md-list>
     </md-outlined-card>`
