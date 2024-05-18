@@ -138,6 +138,9 @@ importers:
 
   packages/kkna:
     dependencies:
+      '@kkna/component-material':
+        specifier: workspace:*
+        version: link:../component-material
       '@kkna/context':
         specifier: workspace:*
         version: link:../context

@@ -1,2 +1,1 @@
-export * as context from './context'
-export * as core from './core'
+export * from '@kkna/component-material'
