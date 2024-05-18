@@ -76,7 +76,7 @@ export class KKnaMaterialComment extends LitElement {
         <md-list-item>
           ${this.comment.author.avatar && html`<img slot="start" width="36" height="36" style="border-radius: 100%" src=${this.comment.author.avatar} />`}
           <div slot="headline" class="headline">
-            ${unsafeHTML(processEmojis(this.comment.author.name, this.comment.emojis))}
+            ${unsafeHTML(processEmojis(this.comment.author.name, this.comment.author.emojis))}
             <span class="flex-1"></span>
             <img class="source" height="24" width="18" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/activitypub.svg" />
           </div>
