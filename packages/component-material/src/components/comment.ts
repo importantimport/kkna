@@ -80,7 +80,10 @@ export class KKnaMaterialComment extends LitElement {
             <span class="flex-1"></span>
             <img class="source" height="24" width="18" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/activitypub.svg" />
           </div>
-          <div slot="supporting-text">${this.comment.published.toLocaleDateString()}</div>
+          <div slot="supporting-text">
+            ${this.comment.author.acct && `${this.comment.author.acct} ·`}
+            ${this.comment.published.toLocaleDateString()}
+          </div>
         </md-list-item>
         <md-divider></md-divider>
         <md-list-item class="md-typescale-body-medium">
