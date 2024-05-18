@@ -1,0 +1,16 @@
+name: GitHub Pages
+
+on:
+  push:
+    paths:
+      - docs/**
+      - packages/**/README.md
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
+    with:
+      publish_dir: docs/.vitepress/dist
+      # cname: kkna.js.org
+      build_command: pnpm docs:build
