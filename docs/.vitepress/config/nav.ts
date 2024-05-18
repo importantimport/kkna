@@ -1,5 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 
+import { version } from '../../../packages/kkna/package.json'
+
 export const components: DefaultTheme.NavItemWithLink[] = [
   {
     link: '/components/material',
@@ -40,5 +42,9 @@ export const nav: DefaultTheme.NavItem[] = [
     activeMatch: '^/presets/',
     items: presets,
     text: 'Presets',
+  },
+  {
+    link: `https://github.com/importantimport/kkna/releases/tag/v${version}`,
+    text: version,
   },
 ]
