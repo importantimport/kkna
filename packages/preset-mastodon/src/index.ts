@@ -21,7 +21,7 @@ export const mastodon = definePreset<Options>(options => ({
   options,
   task: definePresetTask(async () => ({
     comments: await fetchContext(options.id, options.instance)
-      .then(context => transformContext(context)),
+      .then(context => transformContext(context, options.id)),
     reactions: {
       emojis: {
         '♺': await fetchRebloggedBy(options.id, options.instance)

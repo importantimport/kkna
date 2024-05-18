@@ -19,15 +19,8 @@ export const hatsu = definePreset<Options>(options => ({
      */
     const id = btoa(data.url.href).replaceAll('+', '-').replaceAll('/', '_')
     const { task } = mastodon({ ...options, id })
-    const result = await task(data)
 
-    return {
-      ...result,
-      comments: result.comments?.map(comment => ({
-        ...comment,
-        in_reply_to_id: comment.in_reply_to_id === id ? undefined : comment.in_reply_to_id,
-      })),
-    }
+    return await task(data)
   }),
 }))
 
