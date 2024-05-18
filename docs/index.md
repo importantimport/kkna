@@ -11,17 +11,26 @@ hero:
     alt: 💯
   actions:
     - theme: brand
-      text: Quickstart
-      link: '#'
+      text: Get Started
+      link: /intro/get-started.md
     - theme: alt
-      text: GitHub
-      link: https://github.com/importantimport/kkna
+      text: About
+      link: /intro/about.md
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon:
+      src: https://fonts.gstatic.com/s/e/notoemoji/latest/1f386/512.webp
+      alt: 🎆
+    title: Core
+    details: The core engine of KKna is just a few functions and type definitions, that you can use flexibly.
+  - icon:
+      src: https://fonts.gstatic.com/s/e/notoemoji/latest/1f305/512.webp
+      alt: 🌅
+    title: Components
+    details: Choose a component that suits your site, or create your own
+  - icon:
+      src: https://fonts.gstatic.com/s/e/notoemoji/latest/1f304/512.webp
+      alt: 🌄
+    title: Presets
+    details: You can extend KKna to any platform where data is available through an API!
 ---
