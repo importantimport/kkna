@@ -5,10 +5,11 @@
   "repository": "github:importantimport/kkna",
   "scripts": {
     "automd": "automd && pnpm -r exec automd",
-    "build": "pnpm build:core && pnpm build:context && pnpm build:preset && pnpm build:kkna",
+    "build": "pnpm build:core && pnpm build:context && pnpm build:preset && pnpm build:component && pnpm build:kkna",
     "build:core": "pnpm -rF @kkna/core build",
     "build:context": "pnpm -rF @kkna/context build",
     "build:preset": "pnpm -rF @kkna/preset-* build",
+    "build:component": "pnpm -rF @kkna/component-* build",
     "build:kkna": "pnpm -rF kkna build",
     "docs:dev": "pnpm -rF @kkna/docs dev",
     "docs:build": "pnpm -rF @kkna/docs build",
