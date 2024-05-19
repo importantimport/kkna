@@ -2,7 +2,6 @@
   "name": "@kkna/component-material",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
   "author": "藍+85CD",
   "license": "MIT",
   "homepage": "https://github.com/importantimport/kkna",
