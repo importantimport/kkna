@@ -26,6 +26,7 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
+    "@kkna/context": "workspace:*",
     "@kkna/core": "workspace:*",
     "megalodon": "^10.0.0"
   }

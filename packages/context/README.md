@@ -1,10 +1,9 @@
 # @kkna/context
 
-<!-- automd:badges color="gray" license bundlephobia -->
+<!-- automd:badges color="gray" license -->
 
 [![npm version](https://img.shields.io/npm/v/@kkna/context?color=gray)](https://npmjs.com/package/@kkna/context)
 [![npm downloads](https://img.shields.io/npm/dm/@kkna/context?color=gray)](https://npmjs.com/package/@kkna/context)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@kkna/context?color=gray)](https://bundlephobia.com/package/@kkna/context)
 [![license](https://img.shields.io/github/license/importantimport/kkna?color=gray)](https://github.com/importantimport/kkna/blob/main/LICENSE)
 
 <!-- /automd -->

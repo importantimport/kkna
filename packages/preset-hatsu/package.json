@@ -26,6 +26,7 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
+    "@kkna/context": "workspace:*",
     "@kkna/core": "workspace:*",
     "@kkna/preset-mastodon": "workspace:*"
   }

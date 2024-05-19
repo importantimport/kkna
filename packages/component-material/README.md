@@ -1,10 +1,9 @@
 # @kkna/component-material
 
-<!-- automd:badges color="gray" license bundlephobia -->
+<!-- automd:badges color="gray" license -->
 
 [![npm version](https://img.shields.io/npm/v/@kkna/component-material?color=gray)](https://npmjs.com/package/@kkna/component-material)
 [![npm downloads](https://img.shields.io/npm/dm/@kkna/component-material?color=gray)](https://npmjs.com/package/@kkna/component-material)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@kkna/component-material?color=gray)](https://bundlephobia.com/package/@kkna/component-material)
 [![license](https://img.shields.io/github/license/importantimport/kkna?color=gray)](https://github.com/importantimport/kkna/blob/main/LICENSE)
 
 <!-- /automd -->

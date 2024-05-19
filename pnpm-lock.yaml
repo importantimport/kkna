@@ -160,6 +160,9 @@ importers:
 
   packages/preset-hatsu:
     devDependencies:
+      '@kkna/context':
+        specifier: workspace:*
+        version: link:../context
       '@kkna/core':
         specifier: workspace:*
         version: link:../core
@@ -169,6 +172,9 @@ importers:
 
   packages/preset-mastodon:
     devDependencies:
+      '@kkna/context':
+        specifier: workspace:*
+        version: link:../context
       '@kkna/core':
         specifier: workspace:*
         version: link:../core
@@ -178,6 +184,9 @@ importers:
 
   packages/preset-openheart:
     devDependencies:
+      '@kkna/context':
+        specifier: workspace:*
+        version: link:../context
       '@kkna/core':
         specifier: workspace:*
         version: link:../core
