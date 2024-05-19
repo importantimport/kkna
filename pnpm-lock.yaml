@@ -41,6 +41,12 @@ importers:
 
   docs:
     devDependencies:
+      '@kkna/preset-hatsu':
+        specifier: workspace:*
+        version: link:../packages/preset-hatsu
+      kkna:
+        specifier: workspace:*
+        version: link:../packages/kkna
       vue:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.3)

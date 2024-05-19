@@ -12,7 +12,7 @@
     "build:component": "pnpm -rF @kkna/component-* build",
     "build:kkna": "pnpm -rF kkna build",
     "docs:dev": "pnpm -rF @kkna/docs dev",
-    "docs:build": "pnpm -rF @kkna/docs build",
+    "docs:build": "pnpm build && pnpm -rF @kkna/docs build",
     "docs:preview": "pnpm -rF @kkna/docs preview"
   },
   "devDependencies": {

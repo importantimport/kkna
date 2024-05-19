@@ -13,6 +13,10 @@ export const sidebar: DefaultTheme.Sidebar = [
         link: '/intro/get-started.md',
         text: 'Getting Started',
       },
+      {
+        link: '/intro/example.md',
+        text: 'Example',
+      },
     ],
     text: 'Introduction',
   },
