@@ -1,6 +1,3 @@
 {
-  "extends": "@importantimport/tsconfig",
-  "compilerOptions": {
-    "rootDir": "."
-  }
+  "extends": "@importantimport/tsconfig"
 }
