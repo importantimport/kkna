@@ -12,5 +12,5 @@ jobs:
     uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
     with:
       publish_dir: docs/.vitepress/dist
-      # cname: kkna.js.org
+      cname: kkna.js.org
       build_command: pnpm docs:build
