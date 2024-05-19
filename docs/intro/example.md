@@ -1,20 +1,24 @@
 <script setup>
-  import { hatsu } from '@kkna/preset-hatsu'
-  import 'kkna'
+  import { onMounted } from 'vue'
   import { provider } from 'kkna/context'
+  import { hatsu } from '@kkna/preset-hatsu'
 
-  const provide = provider(document.body, {
-    initialValue: {
-      overrides: {
-        url: new URL('https://kwaa-blog-next.deno.dev/articles/test/'),
+  onMounted(() => {
+    import('kkna')
+
+    const provide = provider(document.body, {
+      initialValue: {
+        overrides: {
+          url: new URL('https://kwaa-blog-next.deno.dev/articles/test/'),
+        },
+        presets: [
+          hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
+        ],
       },
-      presets: [
-        hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
-      ],
-    },
-  })
+    })
 
-  provide.hostConnected()
+    provide.hostConnected()
+  })
 </script>
 
 # Example
