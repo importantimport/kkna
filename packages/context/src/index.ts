@@ -1,3 +1,3 @@
 export { consumer } from './consume'
 export { context } from './context'
-export { provider } from './provide'
+export { defineConfig, provider } from './provide'
