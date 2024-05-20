@@ -51,19 +51,6 @@ class MyElement extends LitElement {
 }
 ```
 
-###### provider
-
-```ts
-import { provider } from '@kkna/context'
-
-const provide = provider(document.body, {
-  initialValue: {
-    data: { ...data },
-    presets: [...presets],
-  },
-})
-```
-
 ###### consumer
 
 ```ts
@@ -79,6 +66,30 @@ class MyElement extends LitElement {
     </code></pre>`
   }
 }
+```
+
+###### provider
+
+```ts
+import { provider } from '@kkna/context'
+
+const provide = provider(document.body, {
+  initialValue: {
+    data: { ...data },
+    presets: [...presets],
+  },
+})
+```
+
+###### defineConfig (experimental)
+
+```ts
+import { defineConfig } from '@kkna/context'
+
+defineConfig({
+  data: { ...data },
+  presets: [...presets],
+})
 ```
 
 <!-- ### CDN -->
