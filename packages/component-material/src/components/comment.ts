@@ -88,6 +88,7 @@ export class KKnaMaterialComment extends LitElement {
         <md-divider></md-divider>
         <md-list-item class="md-typescale-body-medium">
           ${unsafeHTML(processEmojis(this.comment.content, this.comment.emojis))}
+          ${this.comment.replies.map(comment => html`<kkna-material-comment .comment=${comment}></kkna-material-comment>`)}
         </md-list-item>
       </md-list>
     </md-outlined-card>`
