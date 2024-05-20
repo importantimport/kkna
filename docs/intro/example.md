@@ -1,23 +1,19 @@
 <script setup>
   import { onMounted } from 'vue'
-  import { provider } from 'kkna/context'
+  import { defineConfig } from 'kkna/context'
   import { hatsu } from '@kkna/preset-hatsu'
 
   onMounted(() => {
     import('kkna')
 
-    const provide = provider(document.body, {
-      initialValue: {
-        overrides: {
-          url: new URL('https://kwaa-blog-next.deno.dev/articles/test/'),
-        },
-        presets: [
-          hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
-        ],
+    defineConfig({
+      overrides: {
+        url: new URL('https://kwaa-blog-next.deno.dev/articles/test/'),
       },
+      presets: [
+        hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
+      ],
     })
-
-    provide.hostConnected()
   })
 </script>
 
@@ -34,20 +30,16 @@ This is an [`@kkna/component-material`](../components/material.md) example using
 ```ts
 import { hatsu } from '@kkna/preset-hatsu'
 import 'kkna'
-import { provider } from 'kkna/context'
+import { defineConfig } from 'kkna/context'
 
-const provide = provider(document.body, {
-  initialValue: {
-    overrides: {
-      url: new URL('https://kwaa-blog-next.deno.dev/articles/test/'),
-    },
-    presets: [
-      hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
-    ],
+defineConfig({
+  overrides: {
+    url: new URL('https://kwaa-blog-next.deno.dev/articles/test/'),
   },
+  presets: [
+    hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
+  ],
 })
-
-provide.hostConnected()
 ```
 
 ```html
