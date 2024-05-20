@@ -11,17 +11,13 @@ here I'm using [`@kkna/preset-hatsu`](../presets/hatsu.md) as an example, you ca
 ```html
 <script type="module">
   import { hatsu } from 'https://esm.sh/@kkna/preset-hatsu'
-  import { provider } from 'https://esm.sh/@kkna/context'
+  import { defineConfig } from 'https://esm.sh/@kkna/context'
 
-  const provide = provider(document.body, {
-    initialValue: {
-      presets: [
-        hatsu({ instance: 'https://hatsu.local' }),
-      ],
-    },
+  defineConfig({
+    presets: [
+      hatsu({ instance: 'https://hatsu.local' }),
+    ],
   })
-
-  provide.hostConnected()
 </script>
 ```
 
