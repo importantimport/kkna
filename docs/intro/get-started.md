@@ -6,7 +6,7 @@ To use KKna, you need to set up two parts: the context and the component.
 
 Make sure the context is above the component (and component import).
 
-here I'm using `@kkna/preset-hatsu` as an example, you can change it to the preset you need.
+here I'm using [`@kkna/preset-hatsu`](../presets/hatsu.md) as an example, you can change it to the preset you need.
 
 ```html
 <script type="module">
