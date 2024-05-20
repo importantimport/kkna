@@ -39,7 +39,8 @@
     "./provide.js": {
       "types": "./dist/provide.d.ts",
       "default": "./dist/provide.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
