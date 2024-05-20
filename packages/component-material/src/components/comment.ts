@@ -78,6 +78,7 @@ export class KKnaMaterialComment extends LitElement {
           <div slot="headline" class="headline">
             ${unsafeHTML(processEmojis(this.comment.author.name, this.comment.author.emojis))}
             <span class="flex-1"></span>
+            <!-- TODO: read this.comment.source -->
             <img class="source" height="24" width="18" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/activitypub.svg" />
           </div>
           <div slot="supporting-text">
