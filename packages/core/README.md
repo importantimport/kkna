@@ -19,14 +19,15 @@ import { process } from '@kkna/core'
 import { mastodon } from '@kkna/preset-mastodon'
 
 const result = await process({
-  data: {
-    mastodon: {
+  data: { ...data },
+  presets: [
+    mastodon({
       // https://fosstodon.org/@importantimport/111211120931974745
       id: '111211120931974745',
       instance: 'https://fosstodon.org',
-    }
-  },
-  presets: [mastodon],
+    }),
+    ...presets,
+  ],
 })
 
 /** @type {import('@kkna/core').ProcessResult} */
@@ -36,11 +37,19 @@ console.log(result)
 ###### definePreset
 
 ```ts
-import { definePreset } from '@kkna/core'
+import { definePreset, definePresetTask } from '@kkna/core'
 
-export const myPreset = definePreset<{ myPreset: MyPresetOptions }>(async ({ myPreset }) => ({
-  comments: { ...comments },
-  reactions: { ...reactions },
+export interface Options extends Record<string, unknown> {
+  /* your options here */
+}
+
+export const example = definePreset<Options>(options => ({
+  name: 'example', // kkna-preset-example => example
+  options,
+  task: definePresetTask(async data => ({
+    comments: { ...comments },
+    reactions: { ...reactions },
+  }))
 }))
 ```
 
