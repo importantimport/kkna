@@ -41,3 +41,14 @@ export default () => (
   <kkna-material></kkna-material>
 )
 ```
+
+### CDN
+
+```html
+<script type="module" src="https://esm.sh/@kkna/component-material"></script>
+<kkna-material></kkna-material>
+```
+
+## License
+
+MIT
