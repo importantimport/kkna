@@ -55,7 +55,6 @@ const provide = provider(document.body, {
 })
 
 provide.hostConnected()
-
 ```
 
 <!-- /automd -->
