@@ -15,6 +15,7 @@ export interface ProcessOverrides {
 
 export interface ProcessResult {
   comments?: Comment[]
+  data?: Partial<Data> & Record<string, unknown>
   reactions?: Reactions
 }
 
@@ -58,6 +59,7 @@ export const process = async (options: ProcessOptions = {}): Promise<ProcessResu
 
   return {
     comments,
+    data,
     reactions: { emojis },
   }
 }
