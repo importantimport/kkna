@@ -5,7 +5,6 @@ import { Task } from '@lit/task'
 import '@material/web/labs/card/filled-card.js'
 import '@material/web/labs/card/outlined-card.js'
 import '@material/web/progress/circular-progress.js'
-import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js'
 import { LitElement, css, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
@@ -20,7 +19,7 @@ import './components/reactions'
  */
 @customElement('kkna-material')
 export class KKnaMaterial extends LitElement {
-  static styles = [typescaleStyles, css`
+  static styles = css`
     .content {
       display: flex;
       flex-direction: column;
@@ -33,7 +32,7 @@ export class KKnaMaterial extends LitElement {
     .pending {
       margin: 32px auto;
     }
-  `]
+  `
 
   private _process = new Task(this, {
     args: () => [this.processOptions],
