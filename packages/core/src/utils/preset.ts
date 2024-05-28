@@ -3,7 +3,7 @@ import type { ProcessResult } from './process'
 
 export type PresetTask = (data: Data) => ProcessResult | Promise<ProcessResult>
 
-export interface Preset<T = undefined> {
+export interface Preset<T = unknown> {
   /**
    * Preset name.
    *
