@@ -15,7 +15,7 @@ export interface ProcessOverrides {
 
 export interface ProcessResult {
   comments?: Comment[]
-  data?: Partial<Data> & Record<string, unknown>
+  data?: Partial<Data>
   reactions?: Reactions
 }
 
