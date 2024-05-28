@@ -1,7 +1,7 @@
 import { definePreset, definePresetTask } from '@kkna/core'
 import { mastodon } from '@kkna/preset-mastodon'
 
-export interface Options extends Record<string, unknown> {
+export interface Options {
   /**
    * Hatsu Instance.
    * @example 'https://hatsu.local'

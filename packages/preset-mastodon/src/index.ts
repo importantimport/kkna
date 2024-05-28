@@ -3,7 +3,7 @@ import { definePreset, definePresetTask } from '@kkna/core'
 import { fetchContext, transformContext } from './utils/comments'
 import { fetchFavouritedBy, fetchRebloggedBy, transformReaction } from './utils/reactions'
 
-export interface Options extends Record<string, unknown> {
+export interface Options {
   /**
    * Mastodon Status ID.
    * @example '111211120931974745'

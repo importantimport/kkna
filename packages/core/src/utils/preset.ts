@@ -3,7 +3,7 @@ import type { ProcessResult } from './process'
 
 export type PresetTask = (data: Data) => ProcessResult | Promise<ProcessResult>
 
-export interface Preset<T extends Record<string, unknown> = Record<string, unknown>> {
+export interface Preset<T = undefined> {
   /**
    * Preset name.
    *
@@ -27,6 +27,6 @@ export interface Preset<T extends Record<string, unknown> = Record<string, unkno
   task: PresetTask
 }
 
-export const definePreset = <T extends Record<string, unknown> = Record<string, unknown>>(preset: (options: T) => Preset<T>) => preset
+export const definePreset = <T>(preset: (options: T) => Preset<T>) => preset
 
 export const definePresetTask = (task: Preset['task']) => task

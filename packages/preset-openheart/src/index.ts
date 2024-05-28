@@ -1,6 +1,6 @@
 import { definePreset, definePresetTask } from '@kkna/core'
 
-export interface Options extends Record<string, unknown> {
+export interface Options {
   /**
    * OpenHeart API Point.
    * @example 'https://api.openheart.fyi'

@@ -39,7 +39,7 @@ console.log(result)
 ```ts
 import { definePreset, definePresetTask } from '@kkna/core'
 
-export interface Options extends Record<string, unknown> {
+export interface Options {
   /* your options here */
 }
 
