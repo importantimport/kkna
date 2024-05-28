@@ -16,6 +16,7 @@ Components use [@kkna/core](/packages/core/) and [@kkna/context](/packages/conte
 
 - [@kkna/component](/packages/component/) - Prototype Component, for testing only
 - [@kkna/component-material](/packages/component-material/) - Material Component
+- [@kkna/component-shadcn](#) - Shadcn Component (TODO)
 
 ## Presets
 
