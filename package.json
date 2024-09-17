@@ -1,11 +1,13 @@
 {
   "name": "@kkna/workspace",
   "type": "module",
+  "version": "0.0.3",
   "private": true,
   "packageManager": "pnpm@9.10.0",
   "repository": "github:importantimport/kkna",
   "scripts": {
     "automd": "automd && corepack pnpm -r exec automd",
+    "bump": "bumpp --all",
     "build": "corepack pnpm -rF ./packages/* build",
     "docs:dev": "corepack pnpm -rF @kkna/docs dev",
     "docs:build": "corepack pnpm build && corepack pnpm -rF @kkna/docs build",
@@ -15,6 +17,7 @@
     "@antfu/eslint-config": "^3.6.2",
     "@importantimport/tsconfig": "^0.1.1",
     "automd": "^0.3.8",
+    "bumpp": "^9.5.2",
     "eslint": "^9.10.0",
     "eslint-plugin-perfectionist": "^3.6.0",
     "tsup": "^8.3.0",
