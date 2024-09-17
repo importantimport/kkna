@@ -4,8 +4,8 @@
   "version": "0.0.4",
   "private": true,
   "scripts": {
-    "dev": "vitepress dev",
     "build": "vitepress build",
+    "dev": "vitepress dev",
     "preview": "vitepress preview"
   },
   "devDependencies": {

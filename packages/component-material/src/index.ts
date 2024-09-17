@@ -1,11 +1,11 @@
 import { context } from '@kkna/context'
-import { type ProcessOptions, process } from '@kkna/core'
+import { process, type ProcessOptions } from '@kkna/core'
 import { consume } from '@lit/context'
 import { Task } from '@lit/task'
 import '@material/web/labs/card/filled-card.js'
 import '@material/web/labs/card/outlined-card.js'
 import '@material/web/progress/circular-progress.js'
-import { LitElement, css, html } from 'lit'
+import { css, html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
 import './components/comment'
@@ -45,13 +45,13 @@ export class KKnaMaterial extends LitElement {
   render() {
     return html`<md-filled-card>
       ${this._process.render({
-      complete: result => html`<div class="content">
+          complete: result => html`<div class="content">
         ${result.reactions && html`<kkna-material-reactions .reactions=${result.reactions}></kkna-material-reactions>`}
         ${result.comments?.map(comment => html`<kkna-material-comment .comment=${comment}></kkna-material-comment>`)}
       </div>`,
-      error: err => html`<p>Error: ${err}</p>`,
-      pending: () => html`<md-circular-progress class="pending" indeterminate></md-circular-progress>`,
-    })}
+          error: err => html`<p>Error: ${err}</p>`,
+          pending: () => html`<md-circular-progress class="pending" indeterminate></md-circular-progress>`,
+        })}
     </md-filled-card>`
   }
 }

@@ -1,6 +1,6 @@
 import type { Reactions } from '@kkna/core'
 
-import { LitElement, css, html } from 'lit'
+import { css, html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 @customElement('kkna-reactions')
@@ -13,7 +13,7 @@ export class KKnaReactions extends LitElement {
   render() {
     return html`<div class="flex flex-wrap gap-2">
       ${this.reactions?.emojis && Object.entries(this.reactions.emojis)
-        .map(([emoji, count]) => html`
+          .map(([emoji, count]) => html`
         <button>${emoji} ${count}</button>
       `)}
     </div>`

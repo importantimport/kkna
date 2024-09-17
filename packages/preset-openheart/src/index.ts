@@ -5,7 +5,7 @@ export interface Options {
    * OpenHeart API Point.
    * @example 'https://api.openheart.fyi'
    */
-  endpoint: URL | string
+  endpoint: string | URL
 }
 
 export const openheart = definePreset<Options>(options => ({

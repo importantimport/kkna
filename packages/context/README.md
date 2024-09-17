@@ -37,7 +37,7 @@ bun install @kkna/context
 ```ts
 import { context } from '@kkna/context'
 import { consume } from '@lit/context'
-import { LitElement, html } from 'lit'
+import { html, LitElement } from 'lit'
 
 class MyElement extends LitElement {
   @consume({ context, subscribe: true })
@@ -55,7 +55,7 @@ class MyElement extends LitElement {
 
 ```ts
 import { consumer } from '@kkna/context'
-import { LitElement, html } from 'lit'
+import { html, LitElement } from 'lit'
 
 class MyElement extends LitElement {
   public processOptions = consumer(this, { subscribe: true })

@@ -4,5 +4,5 @@ export type { CustomEmoji } from './types/custom-emoji.ts'
 export type { Data, DataVendors } from './types/data.ts'
 export type { Reactions } from './types/reactions.ts'
 
-export { type Preset, type PresetTask, definePreset, definePresetTask } from './utils/preset.ts'
-export { type ProcessOptions, type ProcessOverrides, type ProcessResult, process, processComments, processData, processEmojis } from './utils/process.ts'
+export { definePreset, definePresetTask, type Preset, type PresetTask } from './utils/preset.ts'
+export { process, processComments, processData, processEmojis, type ProcessOptions, type ProcessOverrides, type ProcessResult } from './utils/process.ts'

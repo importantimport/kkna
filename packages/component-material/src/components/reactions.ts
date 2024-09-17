@@ -2,7 +2,7 @@ import type { Reactions } from '@kkna/core'
 
 import '@material/web/chips/chip-set.js'
 import '@material/web/chips/filter-chip.js'
-import { LitElement, css, html } from 'lit'
+import { css, html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 /**
@@ -29,7 +29,7 @@ export class KKnaMaterialReactions extends LitElement {
   render() {
     return html`<md-chip-set>
       ${this.reactions?.emojis && Object.entries(this.reactions.emojis)
-        .map(([emoji, count]) => html`<md-filter-chip label=${count} class="chip">
+          .map(([emoji, count]) => html`<md-filter-chip label=${count} class="chip">
           <span slot="icon" class="chip-emoji">${emoji}</span>
         </md-filter-chip>`)}
     </md-chip-set>`

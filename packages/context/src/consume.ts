@@ -9,7 +9,7 @@ export interface ConsumerOptions {
   subscribe?: boolean
 }
 
-export const consumer = (host: ReactiveControllerHost & HTMLElement, options?: ConsumerOptions) => new ContextConsumer(host, {
+export const consumer = (host: HTMLElement & ReactiveControllerHost, options?: ConsumerOptions) => new ContextConsumer(host, {
   ...options,
   context,
 })

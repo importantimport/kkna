@@ -7,7 +7,7 @@ import '@material/web/labs/card/outlined-card.js'
 import '@material/web/list/list.js'
 import '@material/web/list/list-item.js'
 import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js'
-import { LitElement, css, html } from 'lit'
+import { css, html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
