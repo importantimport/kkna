@@ -1,3 +1,13 @@
 {
-  "extends": "@importantimport/tsconfig"
+  "files": [],
+  "references": [
+    { "path": "./packages/component/tsconfig.json" },
+    { "path": "./packages/component-material/tsconfig.json" },
+    { "path": "./packages/context/tsconfig.json" },
+    { "path": "./packages/core/tsconfig.json" },
+    { "path": "./packages/kkna/tsconfig.json" },
+    { "path": "./packages/preset-hatsu/tsconfig.json" },
+    { "path": "./packages/preset-mastodon/tsconfig.json" },
+    { "path": "./packages/preset-openheart/tsconfig.json" },
+  ]
 }
