@@ -29,6 +29,6 @@
   "devDependencies": {
     "@kkna/context": "workspace:*",
     "@kkna/core": "workspace:*",
-    "megalodon": "^10.0.0"
+    "megalodon": "^10.0.3"
   }
 }

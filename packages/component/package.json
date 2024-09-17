@@ -11,16 +11,16 @@
   "dependencies": {
     "@kkna/context": "workspace:*",
     "@kkna/core": "workspace:*",
-    "@lit/context": "^1.1.0",
-    "@lit/task": "^1.0.0",
-    "lit": "^3.1.0"
+    "@lit/context": "^1.1.2",
+    "@lit/task": "^1.0.1",
+    "lit": "^3.2.0"
   },
   "devDependencies": {
     "@kkna/preset-mastodon": "workspace:*",
     "@kkna/preset-openheart": "workspace:*",
-    "@unocss/preset-typography": "^0.59.4",
-    "@unocss/preset-uno": "^0.59.4",
-    "@unocss/reset": "^0.59.4",
-    "@unocss/vite": "^0.59.4"
+    "@unocss/preset-typography": "^0.62.4",
+    "@unocss/preset-uno": "^0.62.4",
+    "@unocss/reset": "^0.62.4",
+    "@unocss/vite": "^0.62.4"
   }
 }
