@@ -13,4 +13,4 @@ jobs:
     with:
       publish_dir: docs/.vitepress/dist
       cname: kkna.js.org
-      build_command: pnpm docs:build
+      build_command: pnpm build
