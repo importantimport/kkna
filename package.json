@@ -11,15 +11,17 @@
     "build": "corepack pnpm -r build",
     "docs:dev": "corepack pnpm -rF @kkna/docs dev",
     "docs:build": "corepack pnpm -rF @kkna/docs build",
-    "docs:preview": "corepack pnpm -rF @kkna/docs preview"
+    "docs:preview": "corepack pnpm -rF @kkna/docs preview",
+    "lint": "eslint --flag unstable_ts_config .",
+    "lint:fix": "eslint --flag unstable_ts_config --fix ."
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.6.2",
+    "@importantimport/eslint-config": "1.0.0-alpha.2",
     "@importantimport/tsconfig": "^0.1.1",
     "automd": "^0.3.8",
     "bumpp": "^9.5.2",
     "eslint": "^9.10.0",
-    "eslint-plugin-perfectionist": "^3.6.0",
     "tsup": "^8.3.0",
     "typescript": "^5.6.2",
     "vite": "^5.4.6",
